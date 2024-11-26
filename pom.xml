@@ -1,0 +1,139 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.dhanya</groupId>
+  <artifactId>seleniumProgram</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>seleniumProgram</name>
+  <modules>
+  	<module>automation-framework</module>
+  	<module>core-product-tests</module>
+  	<module>derived-product1-tests</module>
+  	<module>derived-product2-tests</module>
+  </modules>
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <cp.url>https://www.nba.com/warriors</cp.url> <!-- Core Product URL -->
+    <dp1.url>https://www.nba.com/sixers</dp1.url> <!-- Derived Product 1 URL -->
+    <dp2.url>https://www.nba.com/bulls</dp2.url> <!-- Derived Product 2 URL -->
+  </properties>
+ <dependencies>
+    <dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>4.25.0</version>
+		</dependency>
+		<dependency>
+            <groupId>org.apache.commons</groupId>
+        	<artifactId>commons-csv</artifactId>
+        	<version>1.8</version>
+        	<scope>test</scope>
+    	</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-api</artifactId>
+		    <version>4.25.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-firefox-driver</artifactId>
+		    <version>4.25.0</version>
+		</dependency>
+
+    <!-- TestNG -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>7.7.0</version>
+    </dependency>
+
+    <!-- Cucumber -->
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>7.11.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-spring</artifactId>
+      <version>7.11.0</version>
+    </dependency>
+
+    <!-- Extent Reports -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version>
+    </dependency>
+
+    <!-- WebDriverManager for browser management -->
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.3.0</version>
+    </dependency>
+
+    <!-- Log4j for logging -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.17.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.17.1</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.projectlombok</groupId>
+   	 	<artifactId>lombok</artifactId>
+   		<version>1.18.24</version> <!-- Use the latest stable version -->
+    	<scope>provided</scope>
+	</dependency>
+
+  </dependencies>
+  
+  <profiles>
+    <profile>
+        <id>core-product</id>
+        <properties>
+            <base.url>${cp.url}</base.url>
+        </properties>
+    </profile>
+
+    <profile>
+        <id>derived-product1</id>
+        <properties>
+            <base.url>${dp1.url}</base.url>
+        </properties>
+    </profile>
+
+    <profile>
+        <id>derived-product2</id>
+        <properties>
+            <base.url>${dp2.url}</base.url>
+        </properties>
+    </profile>
+   </profiles>
+
+
+  <build>
+    <plugins>
+      <!-- Compiler plugin to compile source code -->
+      <plugin>
+       	<groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+            <source>1.8</source>
+            <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Derived Product2 Test Suite">
+    <test name="Derived Product2 Tests">
+        <parameter name="browser" value="chrome"/>
+        
+        <parameter name="base.url" value="https://www.nba.com/bulls/"/>
+        <classes>
+            <class name="com.derived.product2.tests.FooterTest"/>
+        </classes>
+    </test>
+</suite>

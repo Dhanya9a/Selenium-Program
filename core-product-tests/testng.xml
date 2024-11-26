@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Core Product Test Suite">
+    <test name="Core Product Tests">
+        <parameter name="browser" value="chrome"/>
+        
+        <parameter name="base.url" value="https://www.nba.com/warriors"/>
+        <classes>
+            <class name="com.core.product.tests.HomePageTest"/>
+            <class name="com.core.product.tests.MenWearTest"/>
+            <class name="com.core.product.tests.NewsPageTest"/>
+        </classes>
+    </test>
+</suite>

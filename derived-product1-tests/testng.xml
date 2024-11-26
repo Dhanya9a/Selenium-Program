@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Derived product1 Test Suite">
+    <test name="Derived product1 Tests">
+        <parameter name="browser" value="chrome"/>
+        
+        <parameter name="base.url" value="https://www.nba.com/sixers/"/>
+        <classes>
+            <class name="com.derived.product1.tests.TicketsTest"/>
+        </classes>
+    </test>
+</suite>

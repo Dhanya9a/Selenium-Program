@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Test Suite">
+    <test name="Core Product Test">
+    	<parameter name="browser" value="chrome"/>
+        <parameter name="base.url" value="${cp.url}"/>
+        <classes>
+            <class name="tests.HomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="Derived Product 1 Test">
+    	<parameter name="browser" value="chrome"/>
+        <parameter name="base.url" value="${dp1.url}"/>
+        <classes>
+            <class name="tests.HomePageTest"/>
+        </classes>
+    </test>
+
+    <test name="Derived Product 2 Test">
+    	<parameter name="browser" value="chrome"/>
+        <parameter name="base.url" value="${dp2.url}"/>
+        <classes>
+            <class name="tests.HomePageTest"/>
+        </classes>
+    </test>
+</suite>

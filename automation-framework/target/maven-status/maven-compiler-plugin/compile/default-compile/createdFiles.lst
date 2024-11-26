@@ -1,0 +1,9 @@
+com\automation\framework\utils\PageObjectManager.class
+com\automation\framework\utils\TestUtils.class
+com\automation\framework\pageObjects\NewsPage.class
+com\automation\framework\pageObjects\TicketsPage.class
+com\automation\framework\base\BaseTest.class
+com\automation\framework\utils\Constants.class
+com\automation\framework\pageObjects\FooterPage.class
+com\automation\framework\pageObjects\MenWearPage.class
+com\automation\framework\pageObjects\HomePage.class
